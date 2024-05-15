@@ -1,4 +1,4 @@
-import express, {Router, Request, Response} from 'express';
+import express from 'express';
 import { PrismaClient } from "@prisma/client";
 import words from 'profane-words';
 
@@ -18,7 +18,7 @@ const router = express.Router();
     //         id: 1,
     //     }
     // });
-router.get("/", async (req, res) => {
+router.get("/", async (_, res) => {
     const guesses = await prisma.guess.findMany();
     res.status(200).json(guesses);
 });
