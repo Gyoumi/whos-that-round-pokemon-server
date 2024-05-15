@@ -13,7 +13,7 @@
   "type": "commonjs",
   "scripts": {
     "watch": "tsc -w",
-    "build": "npx tsc -p .",
+    "build": "tsc",
     "start": "node dist/app.js",
     "dev": "nodemon dist/app.js"
   },
