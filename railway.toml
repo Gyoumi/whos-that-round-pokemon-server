@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+
+[scripts.build]
+commands = ["npm install", "npm run build"]
+
+[scripts.start]
+commands = ["npm start"]
