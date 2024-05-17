@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
-const page = "http://localhost:3000" || process.env.PAGE;
+const page = process.env.PAGE || "http://localhost:3000";
 app.use(cors({
     origin: page,
 }));
